@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Testing QA Cademy App ">
-    <test name="Regression">
-        <classes>
-            <class name="automation.test.LoginTests"></class>
-            <class name="automation.test.RegistrationTests"></class>
-            <class name="automation.test.BankAccountTests"></class>
-            <class name="automation.test.MyAccountTests"></class>
-            <class name="automation.test.SearchTests"></class>
-            <class name="automation.test.LogoutTest"></class>
-        </classes>
-    </test> <!-- Test -->
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing Grafana k6 HTTP REST APIs" parallel="classes">
+<listeners>
+    <listener class-name="org.testng.reporters.EmailableReporter"></listener>
+</listeners>
+<test name="RestAssured Api test">
+    <classes>
+        <class name="API.Crocodiles"></class>
+
+    </classes>
+</test> <!-- Test -->
+<parameter name="output-directory" value="Rest API test output"></parameter>
 </suite> <!-- Suite -->
